@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function () {
+            var oTxt1 = document.querySelector('#txt1');
+            var oTxt2 = document.querySelector('#txt2');
+            var oBtn = document.querySelector('#btn1');
+
+            oBtn.addEventListener('click',function () {
+                var re = /<[^<>]+>/g;
+                oTxt2.value = oTxt1.value.replace(re,'');
+            });
+        }
+    </script>
+</head>
+<body>
+<textarea name="" id="txt1" cols="30" rows="10"></textarea>
+<input id="btn1" type="button" value="转换">
+<textarea name="" id="txt2" cols="30" rows="10"></textarea>
+</body>
+</html>
